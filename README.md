@@ -1,18 +1,18 @@
 # hub2coolq
 > Github webhook 消息转发至qq群
 
+[coolq python SDK](https://github.com/richardchien/cqhttp-python-sdk)
+
+[Coolq Api](https://github.com/richardchien/coolq-http-api)
 
 ### Install
 ```sh
 pip3 install -r requirements.txt --user
-
 ```
 
 ### Config
 ```sh
 cp config-dist.py config.py
-
-vim config.py
 ```
 
 ### Test && Run
@@ -32,9 +32,8 @@ cp config-dist.php config.php
 
 ### 参考文档
 
-[Github webhook](https://developer.github.com/v3/orgs/hooks/)
+[Github webhook](https://developer.github.com/webhooks/)
 
-[Coolq Api](https://github.com/richardchien/coolq-http-api)
 
 
 ### Todo
