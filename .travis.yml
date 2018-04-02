@@ -1,5 +1,25 @@
 language: python
 python:
-        - "3.6"
+  - "3.5"
+  - "3.6"
+
+addons:
+  ssh_known_hosts: $HOST
+
+before_script:
+  - pip install pylint
+
 script:
-        - pytest
+  - pylint hub2coolq.py
+
+before_deploy:
+  - openssl aes-256-cbc -K $encrypted_<...>_key -iv $encrypted_<...>_iv -in deploy_rsa.enc -out /tmp/deploy_rsa -d
+  - eval "$(ssh-agent -s)"
+  - chmod 600 /tmp/deploy_rsa
+  - ssh-add /tmp/deploy_rsa
+
+deploy:
+  - provider: script
+    script: tar -cJvf - hub2coolq.py | ssh $HOST -p $PORT "cd hub2coolq && tar -xJvf - && ./deploy.sh"
+    on:
+      branch: master
