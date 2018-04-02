@@ -8,6 +8,7 @@ addons:
 
 before_script:
   - pip install pylint
+  - cp config-dist.py config.py
 
 script:
   - pylint hub2coolq.py
