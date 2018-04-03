@@ -1,4 +1,6 @@
 # hub2coolq
+[![Build Status](https://travis-ci.org/JRT-FOREVER/hub2coolq.svg?branch=master)](https://travis-ci.org/JRT-FOREVER/hub2coolq)
+
 > Github webhook 消息转发至qq群
 
 [coolq python SDK](https://github.com/richardchien/cqhttp-python-sdk)

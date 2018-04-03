@@ -1,0 +1,2 @@
+[BASIC]
+disable = line-too-long, missing-docstring, invalid-name
